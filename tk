@@ -6,7 +6,8 @@ class TikTokChecker:
         self.headers={"User-Agent":"Mozilla/5.0"}
         self.tok="";self.idd="";self.users=set()            
     def get_inputs(self):        
-        self.idd=input(f"{self.colors['C']}Enter Telegram ID : {self.colors['W']}");self.tok=input(f"{self.colors['C']}Enter Telegram Token : {self.colors['W']}")        
+        self.idd=input(f"{self.colors['C']}Enter Telegram ID : {self.colors['W']}");self.tok=input(f"{self.colors['C']}Enter Telegram Token : {self.colors['W']}")
+        os.system('clear')
     def gh(self):
         try:
             rr=requests.get("https://raw.githubusercontent.com/is-L7N/session_keys/refs/heads/main/github.txt",headers=self.headers,timeout=30)
